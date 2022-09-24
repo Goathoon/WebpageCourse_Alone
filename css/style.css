@@ -42,6 +42,7 @@ a:hover {
     height: 100%;
     margin: 0 auto;
     padding: 0 2rem;
+    overflow:hidden;
 }
 
 header {
@@ -120,6 +121,7 @@ section {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin:0.5rem 1rem;
 }
 
 .skill {
@@ -131,6 +133,10 @@ section {
     padding: 0.5rem 1rem;
     margin: 0 1rem;
     box-shadow: 12px 12px 12px -5px rgba(25, 42, 70, .2);
+    transition:0.5s
+}
+.skill:hover{
+    transform:translate(0,-5px);
 }
 
 .skill-title {
@@ -189,6 +195,9 @@ section {
     font-weight: bold;
     color: #545e6f;
 }
+.roadmap-desc{
+    display:visible;
+}
 
 .slide-prev {
     font-size: 2rem;
@@ -202,14 +211,105 @@ section {
     color: #cfd8dc;
 }
 
+.class-list{
+    display:flex;
+    list-style:none;
+    padding:1rem 0;
+    margin:0;
+    overflow:hidden;
+}
+
+.class-card{
+    width:240px;
+    box-shadow: 12px 12px 12px -5px rgba(25, 42, 70, .2);
+    border-radius:8px;
+    margin:0 10px;
+    transition: 0.5s;
+    flex-shrink:0;
+} 
+.class-card:hover{
+    box-shadow: 12px 12px 12px 0px rgba(25, 42, 70, .2);
+    transform:translate(0,-5px);
+}
+.class-image{
+    max-width:240px;
+    border-radius:8px 8px 0 0;
+}
+.class-container{
+    width:100%;
+    padding:0.5rem 1rem 1rem 1rem;
+}
+.class-skill{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.class-type{
+    font-size:0.9rem;
+    color:#949393;
+}
+.class-format{
+    font-size:0.9rem;
+    color:#fff;
+    background-color:#0d4a71;
+}
+.class-desc{
+    margin-top:0.6rem;
+    width:100%;
+}
+.class-title{
+    font-weight:bold;
+    color:#545e6f;
+    width:100%;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    margin-bottom:0.5rem;
+}
+.class-detail{
+    font-size:0.9rem;
+    color:#545e6f;
+    line-height:1.5rem;
+}
 @media only screen and (min-width: 1200px) {
     .inner {
         max-width: 1200px;
     }
 }
 
+li a:hover{
+    cursor:pointer;
+}
+
+footer{
+    border-top: 1px solid #e4e4e4;
+    background-color:#f8f9fa;
+    padding:1rem 0;
+    margin:1rem 0;
+}
+
+.footer-message{
+    font-weight: bold;
+    font-size:0.9rem;
+    color:#545e6f;
+    margin-bottom:0.3rem;
+    margin:0 0 0 0.6rem;
+}
+.footer-contact{
+    font-size:0.9rem;
+    color:#545e6f;
+    margin:0.6rem;
+}
+.footer-copyright{
+    font-size:0.9rem;
+    color:#545e6f;
+    margin:0.6rem;
+}
 @media only screen and (max-width:980px) {
     .skill-container {
         display: none;
+    }
+    .roadmap-desc{
+        display:none;
     }
 }
