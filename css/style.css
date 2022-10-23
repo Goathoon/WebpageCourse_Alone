@@ -42,7 +42,7 @@ a:hover {
     height: 100%;
     margin: 0 auto;
     padding: 0 2rem;
-    overflow:hidden;
+    overflow: hidden;
 }
 
 header {
@@ -84,7 +84,7 @@ section {
     background-image: url("../img/frogAndGoat.jpg");
     z-index: 1;
     background-size: cover;
-    background-position: center -20%;
+    background-repeat: no-repeat;
 }
 
 .main-container {
@@ -93,7 +93,6 @@ section {
     background-color: rgb(47, 48, 89);
     opacity: 0.7;
     z-index: 2;
-    margin-top: 60px;
 }
 
 .title {
@@ -121,7 +120,7 @@ section {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin:0.5rem 1rem;
+    margin: 0.5rem 1rem;
 }
 
 .skill {
@@ -133,10 +132,11 @@ section {
     padding: 0.5rem 1rem;
     margin: 0 1rem;
     box-shadow: 12px 12px 12px -5px rgba(25, 42, 70, .2);
-    transition:0.5s
+    transition: 0.5s
 }
-.skill:hover{
-    transform:translate(0,-5px);
+
+.skill:hover {
+    transform: translate(0, -5px);
 }
 
 .skill-title {
@@ -195,8 +195,9 @@ section {
     font-weight: bold;
     color: #545e6f;
 }
-.roadmap-desc{
-    display:visible;
+
+.roadmap-desc {
+    display: visible;
 }
 
 .slide-prev {
@@ -205,111 +206,186 @@ section {
     color: rgb(47, 48, 89);
 }
 
+.slide-prev-hover:hover {
+    transition: transform 0.5s;
+    transform: translateX(-2px);
+}
+
 .slide-next {
     font-size: 2rem;
     cursor: pointer;
     color: #cfd8dc;
 }
 
-.class-list{
-    display:flex;
-    list-style:none;
-    padding:1rem 0;
-    margin:0;
-    overflow:hidden;
+.slide-next-hover:hover {
+    transition: transform 0.5x;
+    transform: translateX(+2px);
 }
 
-.class-card{
-    width:240px;
+.class-list {
+    display: flex;
+    list-style: none;
+    padding: 1rem 0;
+    margin: 0;
+    overflow: none;
+    /* transform 시 이미지가 잘림 따라서 hidden 하지 않을것 */
+}
+
+.class-card {
+    width: 240px;
     box-shadow: 12px 12px 12px -5px rgba(25, 42, 70, .2);
-    border-radius:8px;
-    margin:0 10px;
+    border-radius: 8px;
+    margin: 0 10px;
     transition: 0.5s;
-    flex-shrink:0;
-} 
-.class-card:hover{
+    flex-shrink: 0;
+}
+
+.class-card:hover {
     box-shadow: 12px 12px 12px 0px rgba(25, 42, 70, .2);
-    transform:translate(0,-5px);
+    transform: translate(0, -5px);
 }
-.class-image{
-    max-width:240px;
-    border-radius:8px 8px 0 0;
+
+.class-image {
+    max-width: 240px;
+    border-radius: 8px 8px 0 0;
 }
-.class-container{
-    width:100%;
-    padding:0.5rem 1rem 1rem 1rem;
+
+.class-container {
+    width: 100%;
+    padding: 0.5rem 1rem 1rem 1rem;
 }
-.class-skill{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+
+.class-skill {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.class-type{
-    font-size:0.9rem;
-    color:#949393;
+
+.class-type {
+    font-size: 0.9rem;
+    color: #949393;
 }
-.class-format{
-    font-size:0.9rem;
-    color:#fff;
-    background-color:#0d4a71;
+
+.class-format {
+    font-size: 0.9rem;
+    color: #fff;
+    background-color: #0d4a71;
 }
-.class-desc{
-    margin-top:0.6rem;
-    width:100%;
+
+.class-desc {
+    margin-top: 0.6rem;
+    width: 100%;
 }
-.class-title{
-    font-weight:bold;
-    color:#545e6f;
-    width:100%;
-    white-space:nowrap;
-    overflow:hidden;
-    text-overflow:ellipsis;
-    margin-bottom:0.5rem;
+
+.class-title {
+    font-weight: bold;
+    color: #545e6f;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 0.5rem;
 }
-.class-detail{
-    font-size:0.9rem;
-    color:#545e6f;
-    line-height:1.5rem;
+
+.class-detail {
+    font-size: 0.9rem;
+    color: #545e6f;
+    line-height: 1.5rem;
 }
+
 @media only screen and (min-width: 1200px) {
     .inner {
         max-width: 1200px;
     }
 }
 
-li a:hover{
-    cursor:pointer;
+li a:hover {
+    cursor: pointer;
 }
 
-footer{
+footer {
     border-top: 1px solid #e4e4e4;
-    background-color:#f8f9fa;
-    padding:1rem 0;
-    margin:1rem 0;
+    background-color: #f8f9fa;
+    padding: 1rem 0;
+    margin: 1rem 0;
 }
 
-.footer-message{
+.footer-message {
     font-weight: bold;
-    font-size:0.9rem;
-    color:#545e6f;
-    margin-bottom:0.3rem;
-    margin:0 0 0 0.6rem;
+    font-size: 0.9rem;
+    color: #545e6f;
+    margin-bottom: 0.3rem;
+    margin: 0 0 0 0.6rem;
 }
-.footer-contact{
-    font-size:0.9rem;
-    color:#545e6f;
-    margin:0.6rem;
+
+.footer-contact {
+    font-size: 0.9rem;
+    color: #545e6f;
+    margin: 0.6rem;
 }
-.footer-copyright{
-    font-size:0.9rem;
-    color:#545e6f;
-    margin:0.6rem;
+
+.footer-copyright {
+    font-size: 0.9rem;
+    color: #545e6f;
+    margin: 0.6rem;
 }
+
+#backtotop {
+    background-color: rgb(47, 48, 49);
+    width: 40px;
+    height: 40px;
+    text-align: center;
+
+    border-radius: 20px;
+    /*width 와 height의 중간 값으로 하게되면 원이 된다.*/
+    position: fixed;
+    /*고정하게 되면 위치값이 필요하므로, 해당 작업 아래에서 전개
+    그리고 position이 fixed이면 해당 위치가 고정되어, 문서의 흐름에서 벗어남*/
+    bottom: 30px;
+    right: 30px;
+    transition-property: background-color, opacity, visibility;
+    transition-duration: 0.3s, 0.5s, 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+
+}
+
+#backtotop:hover {
+    cursor: pointer;
+    background-color: #2186c4;
+}
+
+/*아이콘 적용방법
+    1. ::after (요소 뒤에 content 추가) 가상 요소에서,
+    2. content: '폰트어썸 유니코드'를 넣고,
+    3. font-family: FontAwesome 이라고 넣으면 됨
+    */
+#backtotop::after {
+    /*요소 바로 뒤에 원래는 해당 css가 나와야하지만, 해당 backtotop의 아이디를
+    가진 요소가 문서의 흐름에서 벗어난 요소이기 때문에, 요소 처음부터 시작이 가능함.*/
+    content: '\f077';
+    font-family: FontAwesome;
+    font-size: 1.5rem;
+    line-height: 40px;
+    /*line-height를 height로 놓으면 가운데로 됨*/
+    color: #fff;
+
+}
+
+#backtotop.show {
+    /*backtotop 아이디를 가지며 show클래스인 곳에 적용*/
+    opacity: 1;
+    visibility: visible;
+    background-color: rgh(47, 48, 49);
+}
+
 @media only screen and (max-width:980px) {
     .skill-container {
         display: none;
     }
-    .roadmap-desc{
-        display:none;
+
+    .roadmap-desc {
+        display: none;
     }
 }
